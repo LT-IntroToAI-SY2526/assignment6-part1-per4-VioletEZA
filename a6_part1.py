@@ -1,7 +1,7 @@
 """
 Assignment 6 Part 1: Student Performance Prediction
-Name: _______________
-Date: _______________
+Name: Emma Adan
+Date: 11/18/2025
 
 This assignment predicts student test scores based on hours studied.
 Complete all the functions below following the in-class ice cream example.
@@ -25,16 +25,24 @@ def load_and_explore_data(filename):
     Returns:
         pandas DataFrame containing the data
     """
+    
     # TODO: Load the CSV file using pandas
-    
+    data = pd.read_csv(filename)
+
     # TODO: Print the first 5 rows
-    
+    print("=== Student Scores Data ===")
+    print(f"\nFirst 5 rows:")
+    print(data.head())
+
     # TODO: Print the shape of the dataset (number of rows and columns)
+    print(f"\nDataset shape: {data.shape[0]} rows, {data.shape[1]} columns")
     
     # TODO: Print basic statistics (mean, min, max, etc.)
+    print(f"\nBasic statistics:")
+    print(data.describe())
     
     # TODO: Return the dataframe
-    pass
+    return data
 
 
 def create_scatter_plot(data):
@@ -45,22 +53,30 @@ def create_scatter_plot(data):
         data: pandas DataFrame with Hours and Scores columns
     """
     # TODO: Create a figure with size (10, 6)
-    
+    plt.figure(figsize=(10,6))
+
     # TODO: Create a scatter plot with Hours on x-axis and Scores on y-axis
     #       Use color='purple' and alpha=0.6
-    
+    plt.scatter(data['Hours'], data['Scores'], color='Purple', alpha=0.6)
+
     # TODO: Add x-axis label: 'Hours Studied'
+    plt.xlabel('Hours Studied', fontsize=12)
     
     # TODO: Add y-axis label: 'Test Score'
-    
+    plt.ylabel('Test Scores', fontsize=12)
+
     # TODO: Add title: 'Student Test Scores vs Hours Studied'
-    
+    plt.title('Hours Studied vs Test Scores', fontsize=14, fontweight='bold')
+
     # TODO: Add a grid with alpha=0.3
-    
+    plt.grid(True, alpha=0.3)
+
     # TODO: Save the figure as 'scatter_plot.png' with dpi=300
-    
+    plt.savefig('scatter_plot.png', dpi=300, bbox_inches='tight')
+    print("\n✓ Scatter plot saved as 'scatter_plot.png'")
+
     # TODO: Show the plot
-    pass
+    plt.show()
 
 
 def split_data(data):
@@ -195,13 +211,16 @@ if __name__ == "__main__":
     
     # Step 1: Load and explore the data
     # TODO: Call load_and_explore_data() with 'student_scores.csv'
-    
+    data = load_and_explore_data("student_scores.csv")
+
     # Step 2: Visualize the relationship
     # TODO: Call create_scatter_plot() with the data
-    
+    create_scatter_plot(data)
+
     # Step 3: Split the data
     # TODO: Call split_data() and store the returned values
-    
+    X_train,X_test,y_train,y_test = split_data(data)
+
     # Step 4: Train the model
     # TODO: Call train_model() with training data
     
