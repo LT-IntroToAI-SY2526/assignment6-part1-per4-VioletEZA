@@ -10,17 +10,14 @@
 ### Question 1: R² Score Interpretation
 What does the R² score tell you about your model? What does it mean if R² is close to 1? What if it's close to 0?
 
-R² score tells me the 
-
-
+R² score tells me basically how the model is like close to the actual data that it was given. So if it's closer to 1 then that's saying that the model is close to 100% perfection and that it's the main proportional impact while if it's closer to 0 then it's the opposite.
 
 ---
 
 ### Question 2: Mean Squared Error (MSE)
 What does the MSE (Mean Squared Error) mean in plain English? Why do you think we square the errors instead of just taking the average of the errors?
 
-**YOUR ANSWER:**
-
+I actually don't reall remember but with some help from AI I think that it's basically just how close the predictions are to actual values by averaging the errors and squaring it to make it positive and makes large errors heavily penalized.
 
 
 
@@ -31,8 +28,7 @@ Would you trust this model to predict a score for a student who studied 10 hours
 - What's the maximum hours in your dataset?
 - What happens when you make predictions outside the range of your training data?
 
-**YOUR ANSWER:**
-
+I would trust it with 10 hours because our largest data for hours was 9.6 however I wouldn't fully expect it to be completely correct because it is still guessing. You get estimated data that may not be completely right.
 
 
 
@@ -46,8 +42,7 @@ Looking at your scatter plot, describe the relationship between hours studied an
 - Linear or non-linear?
 - Positive or negative?
 
-**YOUR ANSWER:**
-
+It's weak (large variety within the data points), linear(they all kind of go along a line), and positive(goes up and to the right)
 
 
 
@@ -56,10 +51,9 @@ Looking at your scatter plot, describe the relationship between hours studied an
 ### Question 5: Real-World Limitations
 What are some real-world factors that could affect test scores that this model doesn't account for? List at least 3 factors.
 
-**YOUR ANSWER:**
-1. 
-2. 
-3. 
+1. Stress
+2. Hours of sleep
+3. Missed meals
 
 
 ---
@@ -69,8 +63,7 @@ What are some real-world factors that could affect test scores that this model d
 ### Question 6: Train/Test Split
 Why do we split our data into training and testing sets? What would happen if we trained and tested on the same data?
 
-**YOUR ANSWER:**
-
+We split our data to get the most accurate information from how the model will maybe act with different data so it's not just learning some things but a larger majority.
 
 
 
@@ -79,8 +72,7 @@ Why do we split our data into training and testing sets? What would happen if we
 ### Question 7: Most Challenging Part
 What was the most challenging part of this assignment for you? How did you overcome it (or what help do you still need)?
 
-**YOUR ANSWER:**
-
+I feel like I was a bit confused between the whole split for testing and training data but now I feel like I kind of understand it more compared to before.
 
 
 
@@ -90,12 +82,11 @@ What was the most challenging part of this assignment for you? How did you overc
 
 ### Question 8: Future Applications
 Describe one real-world problem you could solve with linear regression. What would be your:
-- **Feature (X):** 
-- **Target (Y):** 
+- **Feature (X):** Miles Driven
+- **Target (Y):** Gas Paid
 - **Why this relationship might be linear:**
 
-**YOUR ANSWER:**
-
+Might be linear because if you drive more then you have to pay for more gas.
 
 
 
