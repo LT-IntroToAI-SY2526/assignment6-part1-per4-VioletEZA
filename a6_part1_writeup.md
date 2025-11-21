@@ -1,7 +1,7 @@
 # Assignment 6 Part 1 - Writeup
 
-**Name:** _______________  
-**Date:** _______________
+**Name:** Emma Adan  
+**Date:** 11/21/2025
 
 ---
 
@@ -10,8 +10,7 @@
 ### Question 1: R² Score Interpretation
 What does the R² score tell you about your model? What does it mean if R² is close to 1? What if it's close to 0?
 
-**YOUR ANSWER:**
-
+R² score tells me the 
 
 
 
